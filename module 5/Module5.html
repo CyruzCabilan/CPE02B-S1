@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kaer Morhen Community Hall</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1b1b1b;
+            color: #e0e0e0;
+        }
+        .center-and-space-content {
+            text-align: center;
+            padding: 10px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        nav a {
+            color: #c7a44a;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="center-and-space-content">
+            <img src="EN_The-Witcher-3_Logo-Black_RGB.png"
+                 alt="Witcher Wolf Medallion Logo">
+            <p>Welcome to Kaer Morhen Community Hall</p>
+        </div>
+    </header>
+    
+    <nav role="navigation">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Training</a></li>
+            <li><a href="#events">Gatherings</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Decorative banner -->
+    <div class="banner">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Witcher_landscape.jpg"
+             alt=""
+             aria-hidden="true">
+    </div>
+
+    <main>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>
+                Kaer Morhen is the ancient stronghold of the Witchers. For centuries, it has served
+                as a place of learning, training, and refuge for monster slayers and travelers alike.
+            </p>
+            <p>
+                <img src="Tw3_Kaer_Morhen_valley.webp"
+                     alt="Kaer Morhen Fortress">
+            </p>
+        </section>
+
+        <section id="services">
+            <h2>Our Training</h2>
+            <p>
+                We offer combat training, alchemy workshops, monster lore education,
+                and survival techniques for those brave enough to walk the Path.
+            </p>
+        </section>
+
+        <section id="events" itemscope itemtype="http://schema.org/Event">
+            <h2>Join Our Gatherings</h2>
+            <p itemprop="description">
+                Each year, Witchers gather at Kaer Morhen to share knowledge, train together,
+                and honor the traditions of the School of the Wolf.
+            </p>
+            <p>
+                <strong>Winter Conclave of Witchers</strong><br>
+                Starts:
+                <time itemprop="startDate" datetime="2050-12-01">
+                    December 1, 2050
+                </time>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <h2 id="contact">Contact Us</h2>
+        <p>
+            Seeking guidance or training? Send a raven or email us at
+            <a href="mailto:info@kaermorhen.com">info@kaermorhen.com</a>.
+        </p>
+        <p>&copy; 2050 Kaer Morhen Community Hall</p>
+    </footer>
+
+</body>
+</html>
