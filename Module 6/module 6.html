@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Discover Your World</title>
+    
+    <link rel="icon" href="https://edube.org/uploads/media/default/0001/04/web-favicon.png" type="image/png">
+    
+    <script src="script.js"></script>
+
+    <!-- CSS for fixed table -->
+    <style>
+        .continent-table {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #f9f9f9;
+            border-collapse: collapse;
+        }
+
+        .continent-table th,
+        .continent-table td {
+            border: 1px solid black;
+            padding: 6px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .continent-table th {
+            background-color: #ddd;
+        }
+
+        body {
+            margin-bottom: 180px; /* prevents content from hiding behind table */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Discover Your World &#x1F30D</h1> 
+    <p>Click the button to learn about the continent you're on and some famous geographical features.</p>
+    
+    <button id="discoverLocation">Discover Location</button>
+
+    <img src="https://edube.org/uploads/media/default/0001/04/continents.jpg" usemap="#image-map" alt="World Map">
+
+    <map name="image-map">
+        <area alt="North America" id="north-america" coords="386,283,41,17" shape="rect" href="javascript:void(0);">
+        <area alt="South America" id="south-america" coords="209,501,358,288" shape="rect" href="javascript:void(0);">
+        <area alt="Europe" id="europe" coords="391,68,505,217" shape="rect" href="javascript:void(0);">
+        <area alt="Africa" id="africa" coords="533,217,387,448" shape="rect" href="javascript:void(0);">
+        <area alt="Asia" id="asia" coords="893,153,506,1" shape="rect" href="javascript:void(0);">
+        <area alt="Australia and Oceania" id="australia-and-oceania" coords="679,353,872,480" shape="rect" href="javascript:void(0);">
+    </map>
+
+    <!-- Static Reference Table (Bottom of Page) -->
+    <table class="continent-table">
+        <tr>
+            <th>Continent Name</th>
+            <th>Area (sq km)</th>
+            <th>Population (approx)</th>
+        </tr>
+        <tr>
+            <td>Asia</td>
+            <td>44,579,000</td>
+            <td>4.6 Billion</td>
+        </tr>
+        <tr>
+            <td>Africa</td>
+            <td>30,370,000</td>
+            <td>1.3 Billion</td>
+        </tr>
+        <tr>
+            <td>North America</td>
+            <td>24,709,000</td>
+            <td>579 Million</td>
+        </tr>
+        <tr>
+            <td>South America</td>
+            <td>17,840,000</td>
+            <td>423 Million</td>
+        </tr>
+        <tr>
+            <td>Europe</td>
+            <td>10,180,000</td>
+            <td>746 Million</td>
+        </tr>
+        <tr>
+            <td>Australia/Oceania</td>
+            <td>8,600,000</td>
+            <td>43 Million</td>
+        </tr>
+    </table>
+
+</body>
+</html>
