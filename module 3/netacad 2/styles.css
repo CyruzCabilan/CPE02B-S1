@@ -1,0 +1,107 @@
+/* Page base */
+body {
+  background-color: lightblue;
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+/* Headings */
+h1 {
+  color: rgb(0, 128, 0);
+  font-size: 36px;
+}
+
+h2 {
+  text-align: center;
+}
+
+/* Paragraphs */
+p {
+  color: red;
+  font-style: oblique;
+  border: 3px solid orange;
+  padding: 5px;
+}
+
+/* Links */
+a {
+  color: pink;
+  text-decoration: none;
+}
+
+/* Vivid paragraph */
+.vivid {
+  color: hsl(210, 100%, 50%);
+}
+
+/* Header section */
+.header {
+  background-image: radial-gradient(circle, #ff9900, #ffcc00);
+  height: 500px;
+  text-align: center;
+  color: white;
+  padding-top: 100px;
+}
+
+/* Content */
+.content {
+  padding: 20px;
+}
+
+/* Button */
+.button {
+  background-color: blue;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Input */
+.input-field {
+  outline-color: #007BFF;
+  padding: 8px;
+}
+
+/* Box */
+.box {
+  width: 600px;
+  max-width: 100%;
+  padding: 15px;
+  background-color: green;
+  color: yellow;
+  border: 1px solid black;
+  box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.5);
+  margin: 20px auto;
+}
+
+/* Lists */
+.custom-bullet-list {
+  list-style-type: circle;
+}
+
+.custom-number-list {
+  list-style-type: lower-alpha;
+}
+
+.spaced-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.spaced-list li {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  line-height: 1.6;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+  margin: 20px auto;
+}
