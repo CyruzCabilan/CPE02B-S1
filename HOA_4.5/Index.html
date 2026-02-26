@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Accessible Website - Cabilan</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <span id="menu-label" class="screen-reader-text">Main Navigation Menu</span>
+
+    <button aria-labelledby="menu-label" class="menu-btn">☰ Menu</button>
+
+    <nav>
+      <ul class="navigation-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="content">
+
+    <aside class="sidebar">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="#">Accessibility Guide</a></li>
+        <li><a href="#">Web Standards</a></li>
+        <li><a href="#">WCAG 2.1</a></li>
+        <li><a href="#">Color Contrast</a></li>
+      </ul>
+
+      <h2>Categories</h2>
+      <ul>
+        <li><a href="#">Design</a></li>
+        <li><a href="#">Development</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <h1>Welcome to Our Accessible Website</h1>
+
+      <p>This website is built with accessibility in mind, ensuring all users — including those with disabilities — can navigate and use the site comfortably.</p>
+
+      <p>Learn more about our <a href="#">accessibility features</a> and how we follow <a href="#">WCAG guidelines</a> to make the web better for everyone.</p>
+
+      <h2>Why Accessibility Matters</h2>
+      <p class="large-text">Over 1 billion people worldwide live with some form of disability. Making websites accessible ensures everyone can access information and services online.</p>
+
+      <h2>High Contrast Example</h2>
+      <p class="high-contrast-text">This text uses high contrast colors for better readability. Black text on a white background meets WCAG AAA contrast standards.</p>
+
+      <h2>Get In Touch</h2>
+      <p>Have questions? <a href="#">Contact our team</a> or <a href="#">read our FAQ</a> for more information.</p>
+    </main>
+
+  </div>
+
+  <footer>
+    <p>Cabilan, Cyruz &nbsp;·&nbsp; CSS Accessibility Lab &nbsp;·&nbsp; &copy; 2024</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+body {
+  font-family: 'IM Fell English', Georgia, serif;
+  font-size: 16px;
+  color: #e8dcc8;
+  background-color: #0d0d0d;
+  background-image: radial-gradient(ellipse at top, #1a0505 0%, #0d0d0d 60%);
+  margin: 0;
+  padding: 0;
+}
+
+.header, .footer {
+  background-image: linear-gradient(180deg, #1a0000 0%, #3d0000 50%, #1a0000 100%);
+  padding: 20px;
+  text-align: center;
+}
+
+.header {
+  padding: 50px 20px 40px;
+  border-bottom: 2px solid #c9a84c;
+  box-shadow: 0 4px 40px rgba(139, 0, 0, 0.6);
+}
+.header__kamon {
+  font-size: 4em;
+  color: #c9a84c;
+  text-shadow: 0 0 30px rgba(201, 168, 76, 0.8);
+  margin-bottom: 10px;
+  animation: flicker 4s infinite;
+}
+.header__sub {
+  font-family: 'Cinzel', serif;
+  font-size: 0.85em;
+  color: #9a8a6a;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin: 8px 0 0;
+}
+.header__divider {
+  width: 200px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #c9a84c, transparent);
+  margin: 20px auto 0;
+}
+.header h1 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 2em;
+  color: #c9a84c;
+  text-shadow: 0 0 20px rgba(201, 168, 76, 0.5);
+  margin: 0;
+  letter-spacing: 0.1em;
+}
+
+.footer {
+  border-top: 2px solid #c9a84c;
+  box-shadow: 0 -4px 30px rgba(139, 0, 0, 0.4);
+}
+.footer p {
+  font-family: 'Cinzel', serif;
+  font-size: 0.8em;
+  color: #9a8a6a;
+  letter-spacing: 0.2em;
+  margin: 0;
+}
+
+main {
+  padding: 40px 20px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+main .about {
+  border-radius: 4px;
+  background-color: #1a1008;
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  padding: 30px 35px;
+  margin-bottom: 30px;
+  position: relative;
+}
+main .about::before {
+  content: '// LORE';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  background: #1a1008;
+  padding: 0 8px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.7em;
+  color: #c9a84c;
+  letter-spacing: 0.2em;
+}
+main .about h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5em;
+  color: #c9a84c;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+  padding-bottom: 10px;
+  margin-top: 0;
+}
+main .about p {
+  font-size: 16px;
+  color: #e8dcc8;
+  line-height: 1.8;
+}
+
+main .features {
+  border-radius: 4px;
+  background-color: #1a1008;
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  padding: 30px 35px;
+  margin-bottom: 30px;
+  position: relative;
+}
+main .features::before {
+  content: '// SKILLS';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  background: #1a1008;
+  padding: 0 8px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.7em;
+  color: #c9a84c;
+  letter-spacing: 0.2em;
+}
+main .features h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5em;
+  color: #c9a84c;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+  padding-bottom: 10px;
+  margin-top: 0;
+}
+main .features .feature-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+main .features .feature-list li {
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 5px;
+  background-color: #ffe5e5;
+  color: #e8dcc8;
+  font-size: 16px;
+}
+
+main .example {
+  border-radius: 4px;
+  background-color: #1a1008;
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  padding: 30px 35px;
+  position: relative;
+}
+main .example::before {
+  content: '// TECHNIQUE';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  background: #1a1008;
+  padding: 0 8px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.7em;
+  color: #c9a84c;
+  letter-spacing: 0.2em;
+}
+main .example h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5em;
+  color: #c9a84c;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+  padding-bottom: 10px;
+  margin-top: 0;
+}
+main .example .example-text {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #ffe5e5;
+  color: #1a1008;
+  font-style: italic;
+  line-height: 1.8;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  92%       { opacity: 1; }
+  93%       { opacity: 0.8; }
+  94%       { opacity: 1; }
+  96%       { opacity: 0.9; }
+  97%       { opacity: 1; }
+}

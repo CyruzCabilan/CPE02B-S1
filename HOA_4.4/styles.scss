@@ -1,0 +1,217 @@
+$primary-color: #8b0000;
+$font-size: 16px;
+
+$bg-dark: #0d0d0d;
+$bg-panel: #1a1008;
+$gold: #c9a84c;
+$text-light: #e8dcc8;
+$text-muted: #9a8a6a;
+
+@mixin rounded-corners($radius) {
+  border-radius: $radius;
+}
+
+body {
+  font-family: 'IM Fell English', Georgia, serif;
+  font-size: $font-size;
+  color: $text-light;
+  background-color: $bg-dark;
+  background-image: radial-gradient(ellipse at top, #1a0505 0%, #0d0d0d 60%);
+  margin: 0;
+  padding: 0;
+}
+
+.header, .footer {
+  background-color: lighten($primary-color, 5%);
+  background-image: linear-gradient(180deg, #1a0000 0%, #3d0000 50%, #1a0000 100%);
+  padding: 20px;
+  text-align: center;
+}
+
+.header {
+  padding: 50px 20px 40px;
+  border-bottom: 2px solid $gold;
+  box-shadow: 0 4px 40px rgba($primary-color, 0.6);
+
+  &__kamon {
+    font-size: 4em;
+    color: $gold;
+    text-shadow: 0 0 30px rgba($gold, 0.8);
+    margin-bottom: 10px;
+    animation: flicker 4s infinite;
+  }
+
+  &__sub {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85em;
+    color: $text-muted;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin: 8px 0 0;
+  }
+
+  &__divider {
+    width: 200px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, $gold, transparent);
+    margin: 20px auto 0;
+  }
+
+  h1 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 2em;
+    color: $gold;
+    text-shadow: 0 0 20px rgba($gold, 0.5);
+    margin: 0;
+    letter-spacing: 0.1em;
+  }
+}
+
+.footer {
+  border-top: 2px solid $gold;
+  box-shadow: 0 -4px 30px rgba($primary-color, 0.4);
+
+  p {
+    font-family: 'Cinzel', serif;
+    font-size: 0.8em;
+    color: $text-muted;
+    letter-spacing: 0.2em;
+    margin: 0;
+  }
+}
+
+main {
+  padding: 40px 20px;
+  max-width: 860px;
+  margin: 0 auto;
+
+  .about {
+    @include rounded-corners(4px);
+    background-color: $bg-panel;
+    border: 1px solid rgba($gold, 0.3);
+    padding: 30px 35px;
+    margin-bottom: 30px;
+    position: relative;
+
+    &::before {
+      content: '// LORE';
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      background: $bg-panel;
+      padding: 0 8px;
+      font-family: 'Cinzel', serif;
+      font-size: 0.7em;
+      color: $gold;
+      letter-spacing: 0.2em;
+    }
+
+    h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.5em;
+      color: $gold;
+      border-bottom: 1px solid rgba($gold, 0.2);
+      padding-bottom: 10px;
+      margin-top: 0;
+    }
+
+    p {
+      font-size: $font-size;
+      color: $text-light;
+      line-height: 1.8;
+    }
+  }
+
+  .features {
+    @include rounded-corners(4px);
+    background-color: $bg-panel;
+    border: 1px solid rgba($gold, 0.3);
+    padding: 30px 35px;
+    margin-bottom: 30px;
+    position: relative;
+
+    &::before {
+      content: '// SKILLS';
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      background: $bg-panel;
+      padding: 0 8px;
+      font-family: 'Cinzel', serif;
+      font-size: 0.7em;
+      color: $gold;
+      letter-spacing: 0.2em;
+    }
+
+    h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.5em;
+      color: $gold;
+      border-bottom: 1px solid rgba($gold, 0.2);
+      padding-bottom: 10px;
+      margin-top: 0;
+    }
+
+    .feature-list {
+      list-style-type: disc;
+      padding-left: 20px;
+
+      li {
+        @include rounded-corners(5px);
+        padding: 5px;
+        margin-bottom: 5px;
+        background-color: lighten($primary-color, 50%);
+        color: $text-light;
+        font-size: $font-size;
+      }
+    }
+  }
+
+  .example {
+    @include rounded-corners(4px);
+    background-color: $bg-panel;
+    border: 1px solid rgba($gold, 0.3);
+    padding: 30px 35px;
+    position: relative;
+
+    &::before {
+      content: '// TECHNIQUE';
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      background: $bg-panel;
+      padding: 0 8px;
+      font-family: 'Cinzel', serif;
+      font-size: 0.7em;
+      color: $gold;
+      letter-spacing: 0.2em;
+    }
+
+    h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.5em;
+      color: $gold;
+      border-bottom: 1px solid rgba($gold, 0.2);
+      padding-bottom: 10px;
+      margin-top: 0;
+    }
+
+    .example-text {
+      @include rounded-corners(10px);
+      padding: 10px;
+      background-color: lighten($primary-color, 50%);
+      color: $text-light;
+      font-style: italic;
+      line-height: 1.8;
+    }
+  }
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.8; }
+  94% { opacity: 1; }
+  96% { opacity: 0.9; }
+  97% { opacity: 1; }
+}

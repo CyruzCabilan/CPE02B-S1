@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact List - Cabilan</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      background-color: #f4f4f4;
+      color: #333;
+      font-size: 16px;
+      padding: 30px;
+    }
+    h1 { color: #0654b3; }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 750px;
+      background: #fff;
+    }
+    th {
+      background-color: #0654b3;
+      color: #fff;
+      padding: 10px 16px;
+      text-align: left;
+    }
+    td {
+      padding: 10px 16px;
+      border-bottom: 1px solid #ddd;
+    }
+    tr:last-child td { border-bottom: none; }
+    .highlight { background-color: #fff3cd; }
+    .note {
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>Contact List</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody id="contact-table"></tbody>
+  </table>
+  <p class="note">Open the browser console (F12) to see the first and last contact output.<br>
+  Highlighted row = newly added contact via <code>push()</code>.</p>
+
+  <script src="contacts.js"></script>
+  <script>
+    const tbody = document.getElementById("contact-table");
+    contacts.forEach((contact, index) => {
+      const isNew = index === contacts.length - 1;
+      tbody.innerHTML += `
+        <tr class="${isNew ? 'highlight' : ''}">
+          <td>${index + 1}</td>
+          <td>${contact.name}</td>
+          <td>${contact.phone}</td>
+          <td>${contact.email}</td>
+        </tr>`;
+    });
+  </script>
+</body>
+</html>

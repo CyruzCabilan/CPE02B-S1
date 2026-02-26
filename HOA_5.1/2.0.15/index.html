@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact List - Cabilan</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      background-color: #f4f4f4;
+      color: #333;
+      font-size: 16px;
+      padding: 30px;
+    }
+    h1 { color: #0654b3; }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 700px;
+      background: #fff;
+    }
+    th {
+      background-color: #0654b3;
+      color: #fff;
+      padding: 10px 16px;
+      text-align: left;
+    }
+    td {
+      padding: 10px 16px;
+      border-bottom: 1px solid #ddd;
+    }
+    tr:last-child td { border-bottom: none; }
+    .note {
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>Contact List</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody id="contact-table"></tbody>
+  </table>
+  <p class="note">Open the browser console (F12) to see the first and last contact output.</p>
+  <script src="contacts.js"></script>
+  <script>
+    const tbody = document.getElementById("contact-table");
+    const contacts = [
+      [1, contact1Name, contact1Phone, contact1Email],
+      [2, contact2Name, contact2Phone, contact2Email],
+      [3, contact3Name, contact3Phone, contact3Email],
+    ];
+    contacts.forEach(([num, name, phone, email]) => {
+      tbody.innerHTML += `<tr><td>${num}</td><td>${name}</td><td>${phone}</td><td>${email}</td></tr>`;
+    });
+  </script>
+</body>
+</html>

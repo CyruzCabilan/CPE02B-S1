@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Team Directory - Cabilan</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      background-color: #f4f4f4;
+      color: #333;
+      font-size: 16px;
+      padding: 30px;
+    }
+    h1 { color: #0654b3; }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 850px;
+      background: #fff;
+    }
+    th {
+      background-color: #0654b3;
+      color: #fff;
+      padding: 10px 16px;
+      text-align: left;
+    }
+    td {
+      padding: 10px 16px;
+      border-bottom: 1px solid #ddd;
+      vertical-align: top;
+    }
+    tr:last-child td { border-bottom: none; }
+    .badge {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 12px;
+      font-size: 0.82em;
+      font-weight: bold;
+    }
+    .available { background-color: #d4edda; color: #155724; }
+    .unavailable { background-color: #f8d7da; color: #721c24; }
+    .new-row { background-color: #fff3cd; }
+    .skill-tag {
+      display: inline-block;
+      background-color: #e8f0fe;
+      color: #0654b3;
+      border-radius: 4px;
+      padding: 2px 8px;
+      margin: 2px;
+      font-size: 0.85em;
+    }
+    .note {
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>Project Team Directory</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Role</th>
+        <th>Skills</th>
+        <th>Available</th>
+      </tr>
+    </thead>
+    <tbody id="team-table"></tbody>
+  </table>
+  <p class="note">
+    Open the browser console (F12) to see the data extraction output.<br>
+    🟡 Highlighted row = newly added via <code>push()</code> &nbsp;|&nbsp;
+    Sasha's availability has been updated to <strong>true</strong>.
+  </p>
+  <script src="team.js"></script>
+  <script>
+    const tbody = document.getElementById("team-table");
+    teamDirectory.forEach((member, index) => {
+      const isNew = index === teamDirectory.length - 1;
+      const skillTags = member.skills.map(s => `<span class="skill-tag">${s}</span>`).join(" ");
+      const availBadge = member.available
+        ? `<span class="badge available">✔ Yes</span>`
+        : `<span class="badge unavailable">✘ No</span>`;
+      tbody.innerHTML += `
+        <tr class="${isNew ? 'new-row' : ''}">
+          <td>${index + 1}</td>
+          <td>${member.name}</td>
+          <td>${member.role}</td>
+          <td>${skillTags}</td>
+          <td>${availBadge}</td>
+        </tr>`;
+    });
+  </script>
+</body>
+</html>
